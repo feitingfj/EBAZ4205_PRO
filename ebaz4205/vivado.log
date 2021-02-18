@@ -1,0 +1,77 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Feb  8 23:41:36 2021
+# Process ID: 17720
+# Current directory: C:/Users/F/Desktop/ebaz4205
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10752 C:\Users\F\Desktop\ebaz4205\ebaz4205.xpr
+# Log file: C:/Users/F/Desktop/ebaz4205/vivado.log
+# Journal file: C:/Users/F/Desktop/ebaz4205\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/F/Desktop/ebaz4205/ebaz4205.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Soft/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 830.176 ; gain = 108.637
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Feb  8 23:42:47 2021] Launched synth_1...
+Run output will be captured here: C:/Users/F/Desktop/ebaz4205/ebaz4205.runs/synth_1/runme.log
+[Mon Feb  8 23:42:48 2021] Launched impl_1...
+Run output will be captured here: C:/Users/F/Desktop/ebaz4205/ebaz4205.runs/impl_1/runme.log
+file copy -force C:/Users/F/Desktop/ebaz4205/ebaz4205.runs/impl_1/system_wrapper.sysdef C:/Users/F/Desktop/ebaz4205/ebaz4205.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/F/Desktop/ebaz4205/ebaz4205.sdk -hwspec C:/Users/F/Desktop/ebaz4205/ebaz4205.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/F/Desktop/ebaz4205/ebaz4205.sdk -hwspec C:/Users/F/Desktop/ebaz4205/ebaz4205.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/system.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Successfully read diagram <system> from BD file <C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 958.238 ; gain = 82.160
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_NAND_CYCLES_T_RR {40} CONFIG.PCW_NAND_CYCLES_T_WC {40} CONFIG.PCW_NAND_CYCLES_T_RC {40}] [get_bd_cells processing_system7_0]
+endgroup
+reset_target all [get_files  C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/system.bd]
+export_ip_user_files -of_objects  [get_files  C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/system.bd] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/system.bd]
+save_bd_design
+Wrote  : <C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/system.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In0_width(4) on '/xlconcat_0' with propagated value(8). Command ignored
+Wrote  : <C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/system.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/processing_system7_0/ENET0_GMII_RXD'(8) to net 'ENET0_MII_RXD'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_0/In0'(4) to net 'processing_system7_0_ENET0_GMII_TXD'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/synth/system.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/processing_system7_0/ENET0_GMII_RXD'(8) to net 'ENET0_MII_RXD'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_0/In0'(4) to net 'processing_system7_0_ENET0_GMII_TXD'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+Exporting to file C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/F/Desktop/ebaz4205/ebaz4205.srcs/sources_1/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_xlconcat_0_0, cache-ID = 2a06650709f0e215; cache size = 2.203 MB.
+[Wed Feb 17 23:27:22 2021] Launched system_processing_system7_0_0_synth_1, synth_1...
+Run output will be captured here:
+system_processing_system7_0_0_synth_1: C:/Users/F/Desktop/ebaz4205/ebaz4205.runs/system_processing_system7_0_0_synth_1/runme.log
+synth_1: C:/Users/F/Desktop/ebaz4205/ebaz4205.runs/synth_1/runme.log
+[Wed Feb 17 23:27:22 2021] Launched impl_1...
+Run output will be captured here: C:/Users/F/Desktop/ebaz4205/ebaz4205.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 1146.512 ; gain = 95.922
+file copy -force C:/Users/F/Desktop/ebaz4205/ebaz4205.runs/impl_1/system_wrapper.sysdef C:/Users/F/Desktop/ebaz4205/ebaz4205.sdk/system_wrapper.hdf
+
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 18 00:46:31 2021...

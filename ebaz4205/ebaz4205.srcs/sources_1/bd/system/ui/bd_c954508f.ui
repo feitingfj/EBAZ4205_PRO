@@ -1,0 +1,33 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.6.11  2017-06-12 bk=1.3860 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port ENET0_MII_TX_CLK -pg 1 -y 150 -defaultsOSRD
+preplace port DDR -pg 1 -y 360 -defaultsOSRD
+preplace port ENET0_MII_RX_DV -pg 1 -y 130 -defaultsOSRD
+preplace port FCLK_RESET0_N -pg 1 -y 420 -defaultsOSRD
+preplace port ENET0_MII_RX_CLK -pg 1 -y 110 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 380 -defaultsOSRD
+preplace port FCLK_CLK0 -pg 1 -y 400 -defaultsOSRD
+preplace port MDIO_ETHERNET -pg 1 -y 340 -defaultsOSRD
+preplace portBus ENET0_MII_TX_EN -pg 1 -y 220 -defaultsOSRD
+preplace portBus ENET0_MII_TXD -pg 1 -y 50 -defaultsOSRD
+preplace portBus ENET0_MII_RXD -pg 1 -y 470 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -y 50 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 310 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 1 NJ
+preplace netloc ENET0_GMII_TX_CLK_0_1 1 0 2 NJ 150 490
+preplace netloc ENET0_GMII_RX_DV_0_1 1 0 2 NJ 130 500
+preplace netloc ENET0_MII_RXD 1 0 2 NJ 470 480
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 NJ
+preplace netloc processing_system7_0_ENET0_GMII_TX_EN 1 1 1 NJ
+preplace netloc processing_system7_0_MDIO_ETHERNET_0 1 1 1 NJ
+preplace netloc xlconcat_0_dout 1 1 1 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 1 NJ
+preplace netloc ENET0_GMII_RX_CLK_0_1 1 0 2 NJ 110 510
+preplace netloc processing_system7_0_ENET0_GMII_TXD 1 0 2 20 140 480
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 1 NJ
+levelinfo -pg 1 0 250 530 -top 0 -bot 490
+",
+}
+

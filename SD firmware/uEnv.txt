@@ -1,0 +1,1 @@
+bootcmd=setenv bootargs "root=/dev/ram0 rw init=/linuxrc  console=ttyPS0,115200" &&load mmc 0  ${ramdisk_load_address}  uramdisk.image.gz && load mmc 0  ${devicetree_load_address} devicetree.dtb && load mmc 0  ${kernel_load_address} zImage && bootz ${kernel_load_address}  ${ramdisk_load_address} ${devicetree_load_address}

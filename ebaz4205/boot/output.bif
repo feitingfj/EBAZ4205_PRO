@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\Users\F\Desktop\ebaz4205\ebaz4205.sdk\fsbl\Debug\fsbl.elf
+	C:\Users\F\Desktop\ebaz4205\ebaz4205.runs\impl_1\system_wrapper.bit
+	C:\Users\F\Desktop\ebaz4205\boot\u-boot.elf
+}
